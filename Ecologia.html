@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecologia</title>
+</head>
+<style>
+    body {
+        color: white;
+        background-image: url(im1.jfif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .slider-container {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .slider img {
+        width: 35%;
+        height: auto;
+    }
+    button{
+        padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+    }
+    h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+
+
+tbody tr:hover {
+    background-color: #7fdddd;
+}
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slider img');
+        let index = 0;
+        const slideWidth = slides[0].clientWidth;
+        const totalSlides = slides.length;
+
+        function nextSlide() {
+            index = (index + 1) % totalSlides;
+            updateSlide();
+        }
+
+        function updateSlide() {
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+
+        setInterval(nextSlide, 1000);
+    });
+</script>
+
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="Ecologia1.jpg" alt="imagen1">
+            <img src="Ecologia2.jpg" alt="imagen2">
+            <img src="Ecologia3.jpg" alt="imagen3">
+            <img src="Ecologia4.jpg" alt="imagen4">
+            <img src="Ecologia5.jpg" alt="imagen5">
+            <img src="Ecologia6.jpg" alt="imagen6">
+        </div>
+    </div>
+    <h2>Ecologia</h2>
+    <ul>
+        <button><a href="Proyecto.html">inicio</a></button>
+    </ul>
+        <h1>Las 10 Ciudades Más Pobladas del Mundo</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Posición</th>
+                    <th>Ciudad</th>
+                    <th>País</th>
+                    <th>Población</th>
+                    <th>Área (km²)</th>
+                    <th>Densidad (hab/km²)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Tokio</td>
+                    <td>Japón</td>
+                    <td>37,393,128</td>
+                    <td>2,194</td>
+                    <td>17,045</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Delhi</td>
+                    <td>India</td>
+                    <td>30,290,936</td>
+                    <td>1,484</td>
+                    <td>20,413</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Shanghái</td>
+                    <td>China</td>
+                    <td>27,058,480</td>
+                    <td>6,341</td>
+                    <td>4,269</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Sao Paulo</td>
+                    <td>Brasil</td>
+                    <td>22,043,028</td>
+                    <td>1,521</td>
+                    <td>14,486</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>México D.F.</td>
+                    <td>México</td>
+                    <td>21,782,378</td>
+                    <td>1,485</td>
+                    <td>14,674</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>El Cairo</td>
+                    <td>Egipto</td>
+                    <td>20,900,604</td>
+                    <td>606</td>
+                    <td>34,478</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Dhaka</td>
+                    <td>Bangladesh</td>
+                    <td>20,283,552</td>
+                    <td>306</td>
+                    <td>66,293</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Mumbai</td>
+                    <td>India</td>
+                    <td>20,185,064</td>
+                    <td>603</td>
+                    <td>33,472</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Beijing</td>
+                    <td>China</td>
+                    <td>20,035,455</td>
+                    <td>16,410</td>
+                    <td>1,221</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Osaka</td>
+                    <td>Japón</td>
+                    <td>19,222,665</td>
+                    <td>225</td>
+                    <td>85,434</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Si bien se espera que este número aumente dos tercios para 2050, los desafíos urbanos están creciendo exponencialmente, por lo que es más crucial que nunca adaptar nuestras ciudades. Anualmente, la revisión de la población mundial evalúa el crecimiento
+            de las ciudades y la cantidad de residentes que viven en áreas metropolitanas para comprender las tendencias de evolución global. En 2022, la lista de los 20 países más poblados se mantuvo similar a la edición de 2021, con un ligero cambio en
+            números y posiciones. Tokio mantuvo su estatus como la ciudad más grande del mundo,</p>
+        <p>Comparando los resultados con la edición de 2021, la única disminución que se puede ver en el top 20 involucra a las dos ciudades japonesas, Tokio y Osaka. El resto de la lista tuvo, en promedio, un crecimiento del 1,8% en el total de personas residentes
+            en áreas metropolitanas. De hecho, las ciudades africanas Kinshasa en la República Democrática del Congo y Lagos en Nigeria registraron las tasas más altas, con un aumento de residentes del 4,39 % y del 3,54 %, respectivamente, en 1 año. La ciudad
+            más grande del continente americano sigue siendo Sao Paulo en Brasil, seguida de cerca por Ciudad de México y por Buenos Aires en Argentina más abajo en la tabla. En Europa, Estambul es la más poblada, con más de 14,5 millones de habitantes.</p>
+            <h1>Las 5 Ciudades Más Sostenibles del Mundo</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Posición</th>
+                <th>Ciudad</th>
+                <th>País</th>
+                <th>Población</th>
+                <th>Índice de Sostenibilidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Zúrich</td>
+                <td>Suiza</td>
+                <td>428,737</td>
+                <td>85.2</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Singapur</td>
+                <td>Singapur</td>
+                <td>5,703,600</td>
+                <td>84.5</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Estocolmo</td>
+                <td>Suecia</td>
+                <td>975,551</td>
+                <td>83.7</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Oslo</td>
+                <td>Noruega</td>
+                <td>634,293</td>
+                <td>83.2</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Copenhague</td>
+                <td>Dinamarca</td>
+                <td>1,336,982</td>
+                <td>82.5</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
